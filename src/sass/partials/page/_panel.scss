@@ -1,0 +1,25 @@
+﻿@import "../../modules/_base.scss";
+/*Panels*/
+.b-panel{
+    border:1px solid $border-color;
+    border-radius:$border-radius;
+    box-shadow:0 0 1px $border-color;
+}
+
+.b-panel__header{
+    @extend .b-modal__header;
+    background:$primary-light;
+    border-top-left-radius:$border-radius;
+    border-top-right-radius:$border-radius;
+    border-bottom-color:$border-color !important;
+}
+
+.b-panel__entry{
+    padding:17px 24px;
+    border-bottom-left-radius:$border-radius;
+    border-bottom-right-radius:$border-radius;
+    line-height:1.5;
+    background:#f3f2f1;
+}
+
+

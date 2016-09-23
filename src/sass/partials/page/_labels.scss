@@ -1,0 +1,47 @@
+﻿@import "../../modules/_base.scss";
+/*Labels*/
+.b-label{
+    line-height:1;
+}
+.b-label__item,
+.b-label__title{
+    height:24px;
+    line-height:24px;
+    white-space:nowrap;
+    display:inline-block;
+    vertical-align:middle;
+    margin:5px 10px 5px 0;
+    font-size:rem(14px);
+}
+
+.b-label__item{
+    position:relative;
+    padding:0 25px;
+    box-shadow:0 0 1px #9c785a;
+    background:$primary-light;
+    border-radius:$border-radius;
+
+    &:last-of-type{
+        margin-right:0;
+    }
+}
+
+.b-label__img{
+    @include size(16px);
+    border-radius:50%;
+    position:absolute;
+    top:4px;
+    left:4px;
+}
+
+.b-label__remove{
+    position: absolute;
+    color: #9c785a;
+    cursor: pointer;
+    right: 2px;
+    top: 2px;
+    font-size: rem(24px);
+    transform: rotate(45deg);
+    height: 16px;
+    width: 16px;
+}

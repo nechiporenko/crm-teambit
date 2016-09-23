@@ -1,0 +1,50 @@
+﻿@import "base";
+/* Forms */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+    @include appearance(none);
+}
+
+.g-input,
+.g-select,
+.g-textarea{
+    display:inline-block;
+    vertical-align:middle;
+    width:100%;
+    margin-bottom: 42px;
+    padding:0 10px;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    border-radius:$border-radius;
+    font-size:rem(14px);
+    outline:0;
+
+    @include placeholder{
+        color:$border-color;
+        opacity:1;
+    }
+}
+
+.g-input,
+.g-select{
+    height:35px;
+}
+
+.g-textarea{
+    min-height:5*$project-line-height;
+}
+
+.g-label{
+    display:block;
+    font-size:rem(14px);
+    margin-bottom:8px;
+    font-family: mainFontBold;
+    font-weight: 500;
+}
+

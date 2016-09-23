@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Frontend Boilerplate</title>
+    @@include('templates/head.html')
+</head>
+<body>
+    <main>
+        <button data-modal="modal">
+            Open modal
+        </button>
+        
+        <div class="b-modal b-modal--alt b-modal--large" id="modal">
+            <header class="b-modal__header">
+                <b>Create new survey</b>
+                <button type="button" class="b-modal__close">+</button>
+            </header>
+            <div class="b-modal__row">
+                <!--left col-->
+                <div class="b-modal__col b-modal__col--first">
+                    <label class="g-label">
+                        What question do you want to ask
+                    </label>
+                    <input type="text" class="g-input" placeholder="How happy did you feel at work this week?" />
+                    <label class="g-label">
+                        How often should this question be asked
+                    </label>
+                    <div class="b-date">
+                        <div class="b-date__col">
+                            <select class="g-select">
+                                <option>
+                                    Once a week
+                                </option>
+                                <option>Another option 1</option>
+                                <option>Another option 2</option>
+                            </select>
+                        </div>
+                        <div class="b-date__col b-date__col--center">
+                            <select class="g-select">
+                                <option>
+                                    On Mon
+                                </option>
+                                <option>On op1</option>
+                                <option>On op2</option>
+                            </select>
+                        </div>
+                        <div class="b-date__col">
+                            <select class="g-select">
+                                <option>
+                                    at the start of the day
+                                </option>
+                                <option>Another option 1</option>
+                                <option>Another option 2</option>
+                            </select>
+                        </div>
+                    </div><!--/b-date-->
+                    <label class="g-label">
+                        Who do you want to ask
+                    </label>
+                    <input type="text" class="g-input" placeholder="Some text here" />
+                    <label class="g-label">
+                        Who do you want to share the answers with
+                    </label>
+                    <input type="text" class="g-input" placeholder="Some text here" />
+
+                    <div class="g-clearfix">
+                        <div class="btn btn-main right">
+                            <button type="button">
+                                <div class="icon-container">
+                                    <i class="icon ask-feedback-main-icon"></i>
+                                </div>
+                                Create new survey
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--/left col-->
+                <!--right col-->
+                <div class="b-modal__col b-modal__col--last">
+                    <div class="b-panel">
+                        <div class="b-panel__header">
+                            How happy did you feel at work this week?
+                        </div>
+                        <div class="b-panel__entry">
+                            <div class="b-smile">
+                                <img src="http://placehold.it/38x38/bb55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/55ccee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/dd55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/bb55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/55ccee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/dd55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/bb55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/55ccee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/dd55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/bb55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                            </div>
+                            <div class="g-clearfix">
+                                <div class="g-col g-col--two-thirds">
+                                    <div class="b-label">
+                                        <span class="b-label__title">Send to</span>
+                                        <span class="b-label__item">
+                                            <img src="http://placehold.it/16x16" class="b-label__img" alt="" />
+                                            Alex
+                                            <span class="b-label__remove">+</span>
+                                        </span>
+                                        <span class="b-label__item">
+                                            <img src="http://placehold.it/16x16" class="b-label__img" alt="" />
+                                            Bohdan
+                                            <span class="b-label__remove">+</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="g-col g-col--one-third">
+                                    <div class="btn btn-extra right">
+                                        <button type="button" disabled>
+                                            Anonymous
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/right col-->
+            </div>
+        </div><!--/b-modal--> 
+        
+    </main>
+	<!--/MAIN CONTENT-->
+
+    @@include('templates/footer.html')
+</body>
+</html>

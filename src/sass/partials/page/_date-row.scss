@@ -1,0 +1,24 @@
+﻿@import "../../modules/_base.scss";
+/*Form Date Row*/
+.b-date{
+    @extend .g-clearfix;
+}
+
+.b-date__col{
+    @extend .g-column;
+}
+
+@include media($desktop){
+    .b-date__col{
+        width:(100%-$grid-gutter*2 + 13)/3;
+        margin-left:$grid-gutter;
+
+        &:first-child{
+            margin-left:0;
+        }
+    }
+
+    .b-date__col--center{
+        width:(100%-$grid-gutter*2 -26)/3;
+    }
+}

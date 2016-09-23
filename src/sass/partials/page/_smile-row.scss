@@ -1,0 +1,16 @@
+﻿@import "../../modules/_base.scss";
+/*Smiles*/
+.b-smile{
+    margin:10px 0 25px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.b-smile__img{
+    max-width:100%;
+    margin:5px 0;
+    height:auto;
+    vertical-align:middle;
+}
