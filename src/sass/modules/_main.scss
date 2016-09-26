@@ -1,2 +1,13 @@
 @import "base";
+/*Helper classes*/
+.g-transition{
+    transition-timing-function:ease-in;
+    transition-duration:.1s;
+}
+.g-text-center{
+    text-align:center;
+}
 
+.g-text-right{
+    text-align:right;
+}

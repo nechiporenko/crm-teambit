@@ -10,10 +10,6 @@
     text-align: center;
     text-decoration: none !important;
     white-space: nowrap;
-
-    &:active{
-        transform:translateY(2px);
-    }
 }
 
 .g-clearbutton{
@@ -23,25 +19,53 @@
 }
 
 .g-btn{
-    height:2*$project-line-height;
-    line-height:2*$project-line-height;
-    padding:0 30px;
+    height:35px;
+    line-height:35px;
+    padding:0 20px;
     color:#fff;
     font-size:rem($project-font-size);
     background: $primary;
     border-radius:$border-radius;
+    border:none;
+    @extend .g-transition;
+    transition-property:border-color, background, box-shadow, color;
 
     &:hover,
     &:focus,
     &:active{
         color:#fff;
-        box-shadow:inset 2px 2px 30px darken($primary, 20%);
+        background:darken($primary, 10%);
     }
 
     &:disabled{
-        background:grey;
-        box-shadow:none;
-        transform:none;
+        opacity:.5;
+
+        &:hover,
+        &:active{
+            color:#fff;
+            background: $primary;
+        }
+    }
+}
+
+.g-btn--alt{
+    border:1px solid $primary;
+    line-height:33px;
+    background:#fff;
+    color:$primary;
+
+    &:hover,
+    &:focus,
+    &:active{
+        background:$primary;
+    }
+
+    &:disabled{
+        &:hover,
+        &:active{
+            background:#fff;
+            color:$primary;
+        }
     }
 }
 

@@ -1,3 +1,19 @@
+/*Helper classes*/
+.g-transition, .g-btn {
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-duration: .1s;
+          transition-duration: .1s;
+}
+
+.g-text-center {
+  text-align: center;
+}
+
+.g-text-right {
+  text-align: right;
+}
+
 /*Grid*/
 /*.g-container {
     @include outer-container();
@@ -62,6 +78,68 @@
     }*/
 }
 
+/* Buttons */
+.g-btn,
+.g-clearbutton {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  box-sizing: border-box;
+  outline: 0;
+  text-align: center;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.g-clearbutton {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.g-btn {
+  height: 35px;
+  line-height: 35px;
+  padding: 0 20px;
+  color: #fff;
+  font-size: 0.875rem;
+  background: #263972;
+  border-radius: 7px;
+  border: none;
+  -webkit-transition-property: border-color, background, box-shadow, color;
+          transition-property: border-color, background, box-shadow, color;
+}
+
+.g-btn:hover, .g-btn:focus, .g-btn:active {
+  color: #fff;
+  background: #19264c;
+}
+
+.g-btn:disabled {
+  opacity: .5;
+}
+
+.g-btn:disabled:hover, .g-btn:disabled:active {
+  color: #fff;
+  background: #263972;
+}
+
+.g-btn--alt {
+  border: 1px solid #263972;
+  line-height: 33px;
+  background: #fff;
+  color: #263972;
+}
+
+.g-btn--alt:hover, .g-btn--alt:focus, .g-btn--alt:active {
+  background: #263972;
+}
+
+.g-btn--alt:disabled:hover, .g-btn--alt:disabled:active {
+  background: #fff;
+  color: #263972;
+}
+
 /* Forms */
 input[type="email"],
 input[type="number"],
@@ -85,12 +163,12 @@ textarea {
   vertical-align: middle;
   width: 100%;
   margin-bottom: 42px;
-  padding: 0 10px;
   background-color: #fff;
   border: 1px solid #bdb5af;
   border-radius: 7px;
   font-size: 0.875rem;
   outline: 0;
+  line-height: normal;
 }
 
 .g-input::-webkit-input-placeholder,
@@ -124,6 +202,15 @@ textarea {
 .g-input,
 .g-select {
   height: 35px;
+}
+
+.g-input,
+.g-textarea {
+  padding: 2px 10px 0;
+}
+
+.g-select {
+  padding: 2px 10px;
 }
 
 .g-textarea {
@@ -306,6 +393,7 @@ textarea {
   margin: 5px 0;
   height: auto;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 /*Labels*/
@@ -326,7 +414,7 @@ textarea {
 
 .b-label__item {
   position: relative;
-  padding: 0 25px;
+  padding: 1px 25px;
   box-shadow: 0 0 1px #9c785a;
   background: #ffe7d2;
   border-radius: 7px;

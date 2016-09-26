@@ -1,10 +1,3 @@
-/*!
- * crm-teambit
- * @author: avakandy
- * @version: 0.0.1
- * Copyright 2016.
- */
-
 
 'use strict'
 
@@ -84,25 +77,3 @@ var Modal = (function () {
         });
     }
 })();
-
-
-
-
-
-
-
-
-////helpers
-//function addClass(el, className) {
-//    if (el.classList)
-//        el.classList.add(className);
-//    else
-//        el.className += ' ' + className;
-//};
-
-//function removeClass(el, className) {
-//    if (el.classList)
-//        el.classList.remove(className);
-//    else
-//        el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-//};
