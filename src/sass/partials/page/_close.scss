@@ -1,0 +1,48 @@
+﻿@import "../../modules/_base.scss";
+/*Close icon*/
+.g-icon-close{
+    display:inline-block;
+    vertical-align:middle;
+    @include size(16px);
+    position:relative;
+    overflow:hidden;
+
+    &:before,
+    &:after{
+        content:'';
+        position:absolute;
+        height:2px;
+        width:100%;
+        top:50%;
+        left:0;
+        margin-top:-1px;
+        background:#9c785a;
+        @extend .g-transition;
+        transition-property:background;
+    }
+
+    &:before{
+        transform: rotate(45deg);
+    }
+
+    &:after{
+        transform: rotate((-45deg));
+    }
+
+    &:hover{
+        &:before,
+        &:after{
+            background:$primary;
+        }
+    }
+}
+
+.g-icon-close--small{
+    @include size(13px);
+
+    &:before,
+    &:after{
+        height:1px;
+        margin-top:-.5px;
+    }
+}

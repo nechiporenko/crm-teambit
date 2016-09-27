@@ -40,22 +40,13 @@
 }
 
 .b-modal__close{
+    @extend .g-clearbutton;
     display:block;
     @include size(28px);
     line-height:28px;
-    border:none;
-    padding:0;
-    margin:0;
-    background:none;
-    outline:0;
     position:absolute;
     top:9px;
     right:10px;
-    color:#9c785a;
-    font-size:rem(28px);
-    text-align:center;
-    transform: rotate(45deg);
-    cursor:pointer;
 }
 
 .b-modal__overlay{
@@ -79,6 +70,8 @@
     background:#fff;
 }
 
+
+
 @include media($tablet){
     .b-modal__row{
         display:table;
@@ -101,7 +94,6 @@
 
         .b-panel{
             position:absolute;
-            
             left:20px;
             right:20px;
             top:50%;

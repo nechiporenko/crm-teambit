@@ -20,8 +20,8 @@ $primary:#263972;
 $primary-light:#ffe7d2;
 
 //fonts
-$font-regular:'Arial';
-$font-title:'Arial';
+$font-regular:'mainFont';
+$font-bold:'mainFontBold';
 
 //centered image
 @mixin img-centered(){

@@ -1,19 +1,165 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Frontend Boilerplate</title>
+    <title>Boilerplate</title>
     @@include('templates/head.html')
 </head>
 <body>
-    <main>
-        <button data-modal="modal">
-            Open modal
-        </button>
+    <!--MAIN CONTENT-->
+    <main class="g-container">
+        <div class="g-row">
+            <div class="g-col g-col--one-third">
+                <button type="button" class="g-btn" data-modal="modal">
+                    Open modal
+                </button>
+            </div>
+            <div class="g-col g-col--one-third">
+                <button type="button" class="g-btn" disabled>Disabled button</button>
+            </div>
+            <div class="g-col g-col--one-third">
+                <button type="button" class="g-btn g-btn--alt">Another button</button>
+            </div>
+        </div>
+        <div class="g-row">
+            <div class="g-col g-col--one-third">
+                <label class="g-label">Standart input</label>
+                <input type="text" class="g-input" placeholder="Text input" />
+            </div>
+            <div class="g-col g-col--one-third">
+                <label class="g-label">Standart Select</label>
+                <select class="g-select">
+                    <option>
+                        Option 1
+                    </option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                </select>
+            </div>
+        </div>
+        <div class="g-row">
+            <div class="g-col g-col--two-thirds">
+                <div class="b-panel">
+                    <header class="b-panel__header">
+                        <b>Panel header</b>
+                    </header>
+                    <div class="b-panel__entry">
+                        <label class="g-label">Standart textarea</label>
+                        <textarea class="g-textarea" placeholder="Textarea"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="g-col g-col--one-third">
+                <p><span class="g-icon-close"></span> Close icon</p>
+                <p><span class="g-icon-close g-icon-close--small"></span> Small close icon</p>
+            </div>
+        </div>
+        <div class="g-row">
+            <div class="g-col g-col--one-half">
+                <label class="g-label">Input emulation</label>
+                <div class="g-likeinput">
+                    <div class="g-likeinput__wrap">
+                        <input type="text" class="g-likeinput__input" placeholder="Placeholder" />
+                    </div>
+                    
+                    <ul class="g-likeinput__list">
+                        <li class="g-likeinput__item">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Option 1
+                        </li>
+                        <li class="g-likeinput__item">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Option 2
+                        </li>
+                        <li class="g-likeinput__item">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Option 3
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="g-col g-col--one-half">
+                <label class="g-label">Input emulation - active</label>
+                <div class="g-likeinput active">
+                    <div class="g-likeinput__wrap" style="left:115px;">
+                        <input type="text" class="g-likeinput__input" placeholder="Placeholder" />
+                    </div>
+
+                    <span class="g-likeinput__label">
+                        <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                        Option 1
+                        <button type="button" class="g-likeinput__remove">
+                            <span class="g-icon-close g-icon-close--small"></span>
+                        </button>
+                    </span>
+
+                    <ul class="g-likeinput__list">
+                        <li class="g-likeinput__item">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Option 1
+                        </li>
+                        <li class="g-likeinput__item">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Option 2
+                        </li>
+                        <li class="g-likeinput__item">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Option 3
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="g-row">
+            <div class="g-col g-col--one-half">
+                <label class="g-label">Select emulation</label>
+                <div class="g-likeselect">
+                    <div class="g-likeselect__wrap">
+                        <input type="text" class="g-likeselect__input" placeholder="Placeholder" />
+                    </div>
+                    <ul class="g-likeselect__list">
+                        <li class="g-likeselect__item">
+                            Option 1
+                        </li>
+                        <li class="g-likeselect__item">
+                            Option 2
+                        </li>
+                        <li class="g-likeselect__item">
+                            Option 3
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="g-row">
+            <div class="g-col g-col--one-half">
+                <label class="g-label">Select emulation - active</label>
+                <div class="g-likeselect active">
+                    <div class="g-likeselect__wrap">
+                        <input type="text" class="g-likeselect__input" placeholder="Placeholder" />
+                    </div>
+                    <ul class="g-likeselect__list">
+                        <li class="g-likeselect__item">
+                            Option 1
+                        </li>
+                        <li class="g-likeselect__item">
+                            Option 2
+                        </li>
+                        <li class="g-likeselect__item">
+                            Option 3
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         
+        <!--Modal windows-->
         <div class="b-modal b-modal--alt b-modal--large" id="modal">
             <header class="b-modal__header">
                 <b>Create new survey</b>
-                <button type="button" class="b-modal__close">+</button>
+                <button type="button" class="b-modal__close">
+                    <span class="g-icon-close"></span>
+                </button>
             </header>
             <div class="b-modal__row">
                 <!--left col-->
@@ -27,41 +173,128 @@
                     </label>
                     <div class="b-date">
                         <div class="b-date__col">
-                            <select class="g-select">
-                                <option>
-                                    Once a week
-                                </option>
-                                <option>Another option 1</option>
-                                <option>Another option 2</option>
-                            </select>
+                            <div class="g-likeselect">
+                                <div class="g-likeselect__wrap">
+                                    <input type="text" class="g-likeselect__input" placeholder="Placeholder" value="Once a week" />
+                                </div>
+                                <ul class="g-likeselect__list">
+                                    <li class="g-likeselect__item">
+                                        Option 1
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 2
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 3
+                                    </li>
+                                </ul>
+                            </div><!--/g-likeselect-->
                         </div>
                         <div class="b-date__col b-date__col--center">
-                            <select class="g-select">
-                                <option>
-                                    On Mon
-                                </option>
-                                <option>On op1</option>
-                                <option>On op2</option>
-                            </select>
+                            <div class="g-likeselect">
+                                <div class="g-likeselect__wrap">
+                                    <input type="text" class="g-likeselect__input" placeholder="Placeholder" value="on Mon" />
+                                </div>
+                                <ul class="g-likeselect__list">
+                                    <li class="g-likeselect__item">
+                                        Option 1
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 2
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 3
+                                    </li>
+                                </ul>
+                            </div><!--/g-likeselect-->
                         </div>
                         <div class="b-date__col">
-                            <select class="g-select">
-                                <option>
-                                    at the start of the day
-                                </option>
-                                <option>Another option 1</option>
-                                <option>Another option 2</option>
-                            </select>
+                            <div class="g-likeselect">
+                                <div class="g-likeselect__wrap">
+                                    <input type="text" class="g-likeselect__input" placeholder="Placeholder" value="at the start of the day" />
+                                </div>
+                                <ul class="g-likeselect__list">
+                                    <li class="g-likeselect__item">
+                                        Option 1
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 2
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 3
+                                    </li>
+                                </ul>
+                            </div><!--/g-likeselect-->
                         </div>
                     </div><!--/b-date-->
                     <label class="g-label">
                         Who do you want to ask
                     </label>
-                    <input type="text" class="g-input" placeholder="Some text here" />
+
+                    <div class="g-likeinput">
+                        <div class="g-likeinput__wrap" style="left:115px;">
+                            <input type="text" class="g-likeinput__input" />
+                        </div>
+
+                        <span class="g-likeinput__label">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Everyone
+                            <button type="button" class="g-likeinput__remove">
+                                <span class="g-icon-close g-icon-close--small"></span>
+                            </button>
+                        </span>
+
+                        <ul class="g-likeinput__list">
+                            <li class="g-likeinput__item">
+                                <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                                Everyone
+                            </li>
+                            <li class="g-likeinput__item">
+                                <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                                Option 2
+                            </li>
+                            <li class="g-likeinput__item">
+                                <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                                Option 3
+                            </li>
+                        </ul>
+                    </div><!--/g-likeinput-->
+
                     <label class="g-label">
                         Who do you want to share the answers with
                     </label>
-                    <input type="text" class="g-input" placeholder="Some text here" />
+                    <div class="g-likeinput">
+                        <div class="g-likeinput__wrap" style="left:190px;">
+                            <input type="text" class="g-likeinput__input" />
+                        </div>
+
+                        <span class="g-likeinput__label">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Alex
+                            <button type="button" class="g-likeinput__remove">
+                                <span class="g-icon-close g-icon-close--small"></span>
+                            </button>
+                        </span>
+
+                        <span class="g-likeinput__label">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Bohdan
+                            <button type="button" class="g-likeinput__remove">
+                                <span class="g-icon-close g-icon-close--small"></span>
+                            </button>
+                        </span>
+
+                        <ul class="g-likeinput__list">
+                            <li class="g-likeinput__item">
+                                <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                                Alex
+                            </li>
+                            <li class="g-likeinput__item">
+                                <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                                Bohdan
+                            </li>
+                        </ul>
+                    </div><!--/g-likeinput-->
 
                     <div class="g-text-right">
                         <button type="button" class="g-btn">Create new survey</button>
@@ -71,9 +304,9 @@
                 <!--right col-->
                 <div class="b-modal__col b-modal__col--last">
                     <div class="b-panel">
-                        <div class="b-panel__header">
+                        <header class="b-panel__header">
                             <b>How happy did you feel at work this week?</b>
-                        </div>
+                        </header>
                         <div class="b-panel__entry">
                             <div class="b-smile">
                                 <img src="http://placehold.it/38x38/bb55ee" class="b-smile__img" alt="" style="border-radius:50%" />
@@ -94,17 +327,21 @@
                                         <span class="b-label__item">
                                             <img src="http://placehold.it/16x16" class="b-label__img" alt="" />
                                             Alex
-                                            <span class="b-label__remove">+</span>
+                                            <button type="button" class="b-label__remove">
+                                                <span class="g-icon-close g-icon-close--small"></span>
+                                            </button>
                                         </span>
                                         <span class="b-label__item">
                                             <img src="http://placehold.it/16x16" class="b-label__img" alt="" />
                                             Bohdan
-                                            <span class="b-label__remove">+</span>
+                                            <button type="button" class="b-label__remove">
+                                                <span class="g-icon-close g-icon-close--small"></span>
+                                            </button>
                                         </span>
                                     </div>
                                 </div>
                                 <div class="g-text-right">
-                                    <button type="button" class="g-btn g-btn--alt">Anonymous</button>
+                                    <button type="button" class="g-btn g-btn--alt" disabled>Anonymous</button>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +350,7 @@
                 <!--/right col-->
             </div>
         </div><!--/b-modal--> 
-        
+        <!--/Modal windows-->
     </main>
 	<!--/MAIN CONTENT-->
 

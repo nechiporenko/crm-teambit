@@ -1,26 +1,10 @@
 ﻿@import "base";
 /*Grid*/
-/*.g-container {
+.g-container {
+    width:100%;
     @include outer-container();
     padding:0 10px;
-    box-sizing:border-box;
-
-    @include media($small){
-        width:85%;
-    }
-
-    @include media($tablet){
-        width:95%;
-    }
-
-    @include media($desktop){
-        width:100%;
-    }
-}*/
-
-/*.g-row{
-    @include row();  
-}*/
+}
 
 
 /*Default Grid*/
@@ -30,7 +14,13 @@
     min-height:1px;
 }
 
-.g-clearfix{
+.g-row{
+    width:100%;
+    margin:10px 0;
+}
+
+.g-clearfix,
+.g-row{
     @include clearfix;
 }
 
@@ -56,13 +46,10 @@
     .g-col--two-thirds{
         width: 2*(100%-$grid-gutter*2)/3 + $grid-gutter;
     }
-    /*.g-col--one-fourth{
+    .g-col--one-fourth{
         width:(100% - $grid-gutter*3)/4;
     }
     .g-col--one-fifth{
         width: (100%-$grid-gutter*4)/5;
     }
-    .g-col--one-sixth{
-        width: (100%-$grid-gutter*5)/6;
-    }*/
 }

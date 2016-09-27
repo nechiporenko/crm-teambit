@@ -1,0 +1,121 @@
+﻿@import "../../modules/_base.scss";
+/*Input Emulation*/
+.g-likeinput{
+    height:35px;
+    padding:0 10px;
+    position:relative;
+    white-space:nowrap;
+    color:#444c52;
+}
+
+.g-likeinput__wrap{
+    position:absolute;
+    top:0; left:0; right:0;
+}
+
+.g-likeinput__input{
+    @extend .g-input;
+    display:block;
+    height:33px;
+    border:none;
+    margin:0;
+}
+
+.g-likeinput__list{
+    list-style-type:none;
+    padding:0;
+    margin:10px 0 0;
+    background:#fff;
+    border:1px solid $border-color;
+    border-radius:$border-radius;
+    position:absolute;
+    top:100%;
+    left: 0; right:0;
+    overflow:hidden;
+    z-index:1000;
+    display:none;
+
+    &.active,
+    .g-likeinput.active &{
+        display:block;
+    }
+}
+
+.g-likeinput__item{
+    display:block;
+    height:35px;
+    padding:0 10px;
+    line-height:35px;
+    @extend .g-transition;
+    transition-property:background;
+    font-size:rem(14px);
+    color:$text-color;
+    cursor:pointer;
+
+    &:hover{
+        background:$primary-light;
+    }
+}
+
+.g-likeinput__img{
+    display:inline-block;
+    vertical-align:middle;
+    @include size(16px);
+    border-radius:50%;
+    margin:0 5px 3px 0;
+}
+
+.g-likeinput__label{
+    @extend .b-label__item;
+    margin:4px 5px 0 0;
+
+    .g-likeinput__img{
+        @extend .b-label__img;
+    }
+}
+
+.g-likeinput__remove{
+    @extend .b-label__remove;
+}
+
+/*Select emulation*/
+.g-likeselect{
+    @extend .g-likeinput;
+}
+
+.g-likeselect__wrap{
+    @extend .g-likeinput__wrap;
+    right:30px;
+
+    &:before,
+    &:after{
+        content:'';
+        display:block;
+        position:absolute;
+        top:50%;
+    }
+
+    &:before{
+        @include triangle(10px, $border-color, down);
+        right:-20px;
+        margin-top:-1px;
+    }
+
+    &:after{
+        @include triangle(6px, $primary-light, down);
+        right:-18px;
+    }
+}
+
+
+.g-likeselect__input{
+    @extend .g-likeinput__input;
+    padding-right:0;
+}
+
+.g-likeselect__list{
+    @extend .g-likeinput__list;
+}
+.g-likeselect__item{
+    @extend .g-likeinput__item;
+}

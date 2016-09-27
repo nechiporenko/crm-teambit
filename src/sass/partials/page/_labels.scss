@@ -5,8 +5,8 @@
 }
 .b-label__item,
 .b-label__title{
-    height:24px;
-    line-height:24px;
+    height:25px;
+    line-height:25px;
     white-space:nowrap;
     display:inline-block;
     vertical-align:middle;
@@ -30,18 +30,17 @@
     @include size(16px);
     border-radius:50%;
     position:absolute;
-    top:4px;
+    top:5px;
     left:4px;
 }
 
 .b-label__remove{
+    @extend .g-clearbutton;
+    display:block;
+    @include size(22px);
+    line-height:22px;
     position: absolute;
-    color: #9c785a;
-    cursor: pointer;
-    right: 2px;
-    top: 2px;
-    font-size: rem(24px);
-    transform: rotate(45deg);
-    height: 16px;
-    width: 16px;
+    right: 1px;
+    top: 1px;
+    
 }
