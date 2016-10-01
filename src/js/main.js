@@ -22,14 +22,14 @@ var Modal = (function () {
 
     popUp.prototype.center = function () {
         var top, left,
-            page = document.body.parentElement,
+            _window = window,
             style = getComputedStyle(this.modal);
 
-        top = Math.max(page.offsetHeight - outerHeightEl(this.modal), 0) / 2;
-        left = Math.max(page.offsetWidth - outerWidthEl(this.modal), 0) / 2;
+        top = Math.max(_window.innerHeight - outerHeightEl(this.modal), 0) / 2;
+        left = Math.max(_window.innerWidth - outerWidthEl(this.modal), 0) / 2;
 
-        this.modal.style.top = top + window.pageYOffset + 'px';
-        this.modal.style.left = left + window.pageXOffset + 'px';
+        this.modal.style.top = top + _window.pageYOffset + 'px';
+        this.modal.style.left = left + _window.pageXOffset + 'px';
 
         function outerHeightEl(el) {
             var height = el.offsetHeight;
