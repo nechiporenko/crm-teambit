@@ -80,25 +80,26 @@
 
     .b-modal__col{
         display:table-cell;
-        vertical-align:top;
     }
 
     .b-modal__col--first{
-        width:(500*100%)/1150;
+        width:(530*100%)/1150;
+        vertical-align:top;
     }
 
     .b-modal__col--last{
-        width:((1150-500)*100%)/1150;
+        width:((1150-530)*100%)/1150;
+        vertical-align:middle;
         border-bottom-right-radius:$border-radius;
         position:relative;
 
-        .b-panel{
+        /*.b-panel{
             position:absolute;
             left:20px;
             right:20px;
             top:50%;
             transform:translateY(-50%);
-        }
+        }*/
     }
 
 }

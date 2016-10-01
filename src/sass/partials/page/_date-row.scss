@@ -10,7 +10,7 @@
 
 @include media($desktop){
     .b-date__col{
-        width:(100%-$grid-gutter*2 + 13)/3;
+        width:(100%-$grid-gutter*2 + 15)/3;
         margin-left:$grid-gutter;
 
         &:first-child{
@@ -19,6 +19,6 @@
     }
 
     .b-date__col--center{
-        width:(100%-$grid-gutter*2 -26)/3;
+        width:(100%-$grid-gutter*2 -30)/3;
     }
 }

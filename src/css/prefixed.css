@@ -302,38 +302,37 @@ textarea {
   }
   .b-modal__col {
     display: table-cell;
-    vertical-align: top;
   }
   .b-modal__col--first {
-    width: 43.4782608696%;
+    width: 46.0869565217%;
+    vertical-align: top;
   }
   .b-modal__col--last {
-    width: 56.5217391304%;
+    width: 53.9130434783%;
+    vertical-align: middle;
     border-bottom-right-radius: 7px;
     position: relative;
-  }
-  .b-modal__col--last .b-panel {
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+    /*.b-panel{
+            position:absolute;
+            left:20px;
+            right:20px;
+            top:50%;
+            transform:translateY(-50%);
+        }*/
   }
 }
 
 /*Form Date Row*/
 @media screen and (min-width: 62em) {
   .b-date__col {
-    width: 36.0948986511%;
+    width: 36.7615653177%;
     margin-left: 2.3576520234%;
   }
   .b-date__col:first-child {
     margin-left: 0;
   }
   .b-date__col--center {
-    width: 23.0948986511%;
+    width: 21.7615653177%;
   }
 }
 
