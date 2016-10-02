@@ -1,0 +1,17 @@
+﻿@import "../../modules/_base.scss";
+/*Plus icon*/
+.g-icon-add{
+    @extend .g-icon-close;
+   
+    &:before{
+        transform:none;
+    }
+
+    &:after{
+        transform:rotate(90deg);
+    }
+}
+
+.g-icon-add--small{
+    @extend .g-icon-close--small;
+}

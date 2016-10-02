@@ -4,7 +4,7 @@
 .b-modal{
     display:none;
     position:absolute;
-    width:98%;
+    width:92%;
     max-width:650px;
     z-index:5100;
     line-height:1;
@@ -27,11 +27,17 @@
 
 .b-modal__header{
     min-height:51px;
-    padding:14px 30px 14px 24px;
+    padding:14px 35px 14px 24px;
     font-size:rem(20px);
     border-bottom:1px solid $border-color;
+    border-top-left-radius:$border-radius;
+    border-top-right-radius:$border-radius;
     line-height:1.1;
     position:relative;
+}
+
+.b-modal__header--alt{
+    background:$primary-light;
 }
 
 .b-modal__entry{
@@ -46,7 +52,7 @@
     line-height:28px;
     position:absolute;
     top:9px;
-    right:10px;
+    right:16px;
 }
 
 .b-modal__overlay{
@@ -93,13 +99,9 @@
         border-bottom-right-radius:$border-radius;
         position:relative;
 
-        /*.b-panel{
-            position:absolute;
-            left:20px;
-            right:20px;
-            top:50%;
-            transform:translateY(-50%);
-        }*/
+        .b-panel{
+            margin:20px 0;
+        }
     }
 
 }

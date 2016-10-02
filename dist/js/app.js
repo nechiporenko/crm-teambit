@@ -7,7 +7,7 @@
 
 
 'use strict'
-
+//modal - constructor
 var Modal = (function () {
     var popUp = function (id) {
         this.modalId = id;
@@ -72,7 +72,7 @@ var Modal = (function () {
     return popUp;
 })();
 
-
+//open modal by button click:
 (function () {
     var modal_btn = document.querySelectorAll('[data-modal]');
     if (modal_btn.length > 0) {

@@ -13,18 +13,32 @@
 </head>
 <body>
     <!--MAIN CONTENT-->
-    <main class="g-container" style="min-height:5000px">
+    <main class="g-container">
         <div class="g-row">
-            <div class="g-col g-col--one-third">
-                <button type="button" class="g-btn" data-modal="modal">
-                    Open modal
+            <div class="g-col g-col--one-fourth">
+                <button type="button" class="g-btn" data-modal="modal00">
+                    Open default modal
                 </button>
             </div>
-            <div class="g-col g-col--one-third">
+            <div class="g-col g-col--one-fourth">
                 <button type="button" class="g-btn" disabled>Disabled button</button>
             </div>
-            <div class="g-col g-col--one-third">
+            <div class="g-col g-col--one-fourth">
                 <button type="button" class="g-btn g-btn--alt">Another button</button>
+            </div>
+            <div class="g-col g-col--one-fourth">
+                <button type="button" class="g-btn g-btn--alt" disabled>Disabled button</button>
+            </div>
+        </div>
+        <div class="g-row">
+            <div class="g-col g-col--one-fourth">
+                <button type="button" class="g-btn g-btn--alt" data-modal="modal01">Open modal #1</button>
+            </div>
+            <div class="g-col g-col--one-fourth">
+                <button type="button" class="g-btn g-btn--alt" data-modal="modal02">Open modal #2</button>
+            </div>
+            <div class="g-col g-col--one-fourth">
+                <button type="button" class="g-btn g-btn--alt" data-modal="modal03">Open modal #3</button>
             </div>
         </div>
         <div class="g-row">
@@ -48,6 +62,9 @@
                 <div class="b-panel">
                     <header class="b-panel__header">
                         <b>Panel header</b>
+                        <button type="button" class="b-panel__close">
+                            <span class="g-icon-close"></span>
+                        </button>
                     </header>
                     <div class="b-panel__entry">
                         <label class="g-label">Standart textarea</label>
@@ -56,8 +73,10 @@
                 </div>
             </div>
             <div class="g-col g-col--one-third">
-                <p><span class="g-icon-close"></span> Close icon</p>
-                <p><span class="g-icon-close g-icon-close--small"></span> Small close icon</p>
+                <p><span class="g-icon-close"></span>&emsp;Close icon</p>
+                <p><span class="g-icon-close g-icon-close--small"></span>&emsp;Small close icon</p>
+                <p><span class="g-icon-add"></span>&emsp;Plus icon</p>
+                <p><span class="g-icon-add g-icon-add--small"></span>&emsp;Small plus icon</p>
             </div>
         </div>
         <div class="g-row">
@@ -161,7 +180,51 @@
 
         
         <!--Modal windows-->
-        <div class="b-modal b-modal--alt b-modal--large" id="modal">
+        <div class="b-modal" id="modal00">
+            <header class="b-modal__header">
+                <b>Default modal window</b>
+            </header>
+            <button type="button" class="b-modal__close">
+                <span class="g-icon-close"></span>
+            </button>
+            <div class="b-modal__entry">
+                <label class="g-label">
+                    Who do you want to ask
+                </label>
+
+                <div class="g-likeinput">
+                    <div class="g-likeinput__wrap" style="left:115px;">
+                        <input type="text" class="g-likeinput__input" />
+                    </div>
+
+                    <span class="g-likeinput__label">
+                        <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                        Everyone
+                        <button type="button" class="g-likeinput__remove">
+                            <span class="g-icon-close g-icon-close--small"></span>
+                        </button>
+                    </span>
+
+                    <ul class="g-likeinput__list">
+                        <li class="g-likeinput__item">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Everyone
+                        </li>
+                        <li class="g-likeinput__item">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Option 2
+                        </li>
+                        <li class="g-likeinput__item">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Option 3
+                        </li>
+                    </ul>
+                </div><!--/g-likeinput-->
+                <button type="button" class="g-btn g-btn--wide">Submit</button>
+            </div><!--/b-modal__entry-->
+        </div><!--/b-modal #modal00-->
+
+        <div class="b-modal b-modal--alt b-modal--large" id="modal01">
             <header class="b-modal__header">
                 <b>Create new survey</b>
                 <button type="button" class="b-modal__close">
@@ -310,7 +373,7 @@
                 <!--/left col-->
                 <!--right col-->
                 <div class="b-modal__col b-modal__col--last">
-                    <div class="b-panel">
+                    <div class="b-panel b-panel--alt">
                         <header class="b-panel__header">
                             <b>How happy did you feel at work this week?</b>
                         </header>
@@ -356,7 +419,392 @@
                 </div>
                 <!--/right col-->
             </div>
-        </div><!--/b-modal--> 
+        </div><!--/b-modal #modal01-->
+
+        <div class="b-modal b-modal--alt b-modal--large" id="modal02">
+            <header class="b-modal__header">
+                <b>Create new survey</b>
+                <button type="button" class="b-modal__close">
+                    <span class="g-icon-close"></span>
+                </button>
+            </header>
+            <div class="b-modal__row">
+                <!--left col-->
+                <div class="b-modal__col b-modal__col--first">
+                    <label class="g-label">
+                        What question do you want to ask
+                    </label>
+                    <input type="text" class="g-input" placeholder="How happy did you feel at work this week?" />
+                    <label class="g-label">
+                        How often should this question be asked
+                    </label>
+                    <div class="b-date">
+                        <div class="b-date__col">
+                            <div class="g-likeselect">
+                                <div class="g-likeselect__wrap">
+                                    <input type="text" class="g-likeselect__input" placeholder="Placeholder" value="Once a week" />
+                                </div>
+                                <ul class="g-likeselect__list">
+                                    <li class="g-likeselect__item">
+                                        Option 1
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 2
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 3
+                                    </li>
+                                </ul>
+                            </div><!--/g-likeselect-->
+                        </div>
+                        <div class="b-date__col b-date__col--center">
+                            <div class="g-likeselect">
+                                <div class="g-likeselect__wrap">
+                                    <input type="text" class="g-likeselect__input" placeholder="Placeholder" value="on Mon" />
+                                </div>
+                                <ul class="g-likeselect__list">
+                                    <li class="g-likeselect__item">
+                                        Option 1
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 2
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 3
+                                    </li>
+                                </ul>
+                            </div><!--/g-likeselect-->
+                        </div>
+                        <div class="b-date__col">
+                            <div class="g-likeselect">
+                                <div class="g-likeselect__wrap">
+                                    <input type="text" class="g-likeselect__input" placeholder="Placeholder" value="at the start of the day" />
+                                </div>
+                                <ul class="g-likeselect__list">
+                                    <li class="g-likeselect__item">
+                                        Option 1
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 2
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 3
+                                    </li>
+                                </ul>
+                            </div><!--/g-likeselect-->
+                        </div>
+                    </div><!--/b-date-->
+                    <label class="g-label">
+                        Who do you want to ask
+                    </label>
+
+                    <div class="g-likeinput">
+                        <div class="g-likeinput__wrap" style="left:115px;">
+                            <input type="text" class="g-likeinput__input" />
+                        </div>
+
+                        <span class="g-likeinput__label">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Everyone
+                            <button type="button" class="g-likeinput__remove">
+                                <span class="g-icon-close g-icon-close--small"></span>
+                            </button>
+                        </span>
+
+                        <ul class="g-likeinput__list">
+                            <li class="g-likeinput__item">
+                                <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                                Everyone
+                            </li>
+                            <li class="g-likeinput__item">
+                                <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                                Option 2
+                            </li>
+                            <li class="g-likeinput__item">
+                                <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                                Option 3
+                            </li>
+                        </ul>
+                    </div><!--/g-likeinput-->
+
+                    <label class="g-label">
+                        Who do you want to share the answers with
+                    </label>
+                    <div class="g-likeinput">
+                        <div class="g-likeinput__wrap" style="left:190px;">
+                            <input type="text" class="g-likeinput__input" />
+                        </div>
+
+                        <span class="g-likeinput__label">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Alex
+                            <button type="button" class="g-likeinput__remove">
+                                <span class="g-icon-close g-icon-close--small"></span>
+                            </button>
+                        </span>
+
+                        <span class="g-likeinput__label">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Bohdan
+                            <button type="button" class="g-likeinput__remove">
+                                <span class="g-icon-close g-icon-close--small"></span>
+                            </button>
+                        </span>
+
+                        <ul class="g-likeinput__list">
+                            <li class="g-likeinput__item">
+                                <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                                Alex
+                            </li>
+                            <li class="g-likeinput__item">
+                                <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                                Bohdan
+                            </li>
+                        </ul>
+                    </div><!--/g-likeinput-->
+
+                    <div class="g-text-right">
+                        <button type="button" class="g-btn g-btn--alt">Pause</button>
+                        <button type="button" class="g-btn">Create new survey</button>
+                    </div>
+                </div>
+                <!--/left col-->
+                <!--right col-->
+                <div class="b-modal__col b-modal__col--last">
+                    <div class="b-panel b-panel--alt">
+                        <header class="b-panel__header">
+                            <b>How happy did you feel at work this week?</b>
+                        </header>
+                        <div class="b-panel__entry">
+                            <div class="b-smile">
+                                <img src="http://placehold.it/38x38/bb55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/55ccee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/dd55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/bb55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/55ccee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/dd55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/bb55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/55ccee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/dd55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/bb55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                            </div>
+                            <div class="g-clearfix">
+                                <div class="g-col g-col--two-thirds">
+                                    <div class="b-label">
+                                        <span class="b-label__title">Send to</span>
+                                        <span class="b-label__item">
+                                            <img src="http://placehold.it/16x16" class="b-label__img" alt="" />
+                                            Alex
+                                            <button type="button" class="b-label__remove">
+                                                <span class="g-icon-close g-icon-close--small"></span>
+                                            </button>
+                                        </span>
+                                        <span class="b-label__item">
+                                            <img src="http://placehold.it/16x16" class="b-label__img" alt="" />
+                                            Bohdan
+                                            <button type="button" class="b-label__remove">
+                                                <span class="g-icon-close g-icon-close--small"></span>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="g-text-right">
+                                    <button type="button" class="g-btn g-btn--alt" disabled>Anonymous</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/right col-->
+            </div>
+        </div><!--/b-modal #modal02-->
+
+        <div class="b-modal b-modal--alt b-modal--large" id="modal03">
+            <header class="b-modal__header">
+                <b>Create new survey</b>
+                <button type="button" class="b-modal__close">
+                    <span class="g-icon-close"></span>
+                </button>
+            </header>
+            <div class="b-modal__row">
+                <!--left col-->
+                <div class="b-modal__col b-modal__col--first">
+                    <label class="g-label">
+                        What question do you want to ask
+                    </label>
+                    <input type="text" class="g-input" placeholder="How happy did you feel at work this week?" />
+                    <label class="g-label">
+                        How often should this question be asked
+                    </label>
+                    <div class="b-date">
+                        <div class="b-date__col">
+                            <div class="g-likeselect">
+                                <div class="g-likeselect__wrap">
+                                    <input type="text" class="g-likeselect__input" placeholder="Placeholder" value="Once a week" />
+                                </div>
+                                <ul class="g-likeselect__list">
+                                    <li class="g-likeselect__item">
+                                        Option 1
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 2
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 3
+                                    </li>
+                                </ul>
+                            </div><!--/g-likeselect-->
+                        </div>
+                        <div class="b-date__col b-date__col--center">
+                            <div class="g-likeselect">
+                                <div class="g-likeselect__wrap">
+                                    <input type="text" class="g-likeselect__input" placeholder="Placeholder" value="on Mon" />
+                                </div>
+                                <ul class="g-likeselect__list">
+                                    <li class="g-likeselect__item">
+                                        Option 1
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 2
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 3
+                                    </li>
+                                </ul>
+                            </div><!--/g-likeselect-->
+                        </div>
+                        <div class="b-date__col">
+                            <div class="g-likeselect">
+                                <div class="g-likeselect__wrap">
+                                    <input type="text" class="g-likeselect__input" placeholder="Placeholder" value="at the start of the day" />
+                                </div>
+                                <ul class="g-likeselect__list">
+                                    <li class="g-likeselect__item">
+                                        Option 1
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 2
+                                    </li>
+                                    <li class="g-likeselect__item">
+                                        Option 3
+                                    </li>
+                                </ul>
+                            </div><!--/g-likeselect-->
+                        </div>
+                    </div><!--/b-date-->
+                    <label class="g-label">
+                        Who do you want to ask
+                    </label>
+
+                    <div class="g-likeinput">
+                        <div class="g-likeinput__wrap" style="left:115px;">
+                            <input type="text" class="g-likeinput__input" />
+                        </div>
+
+                        <span class="g-likeinput__label">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Everyone
+                            <button type="button" class="g-likeinput__remove">
+                                <span class="g-icon-close g-icon-close--small"></span>
+                            </button>
+                        </span>
+
+                        <ul class="g-likeinput__list">
+                            <li class="g-likeinput__item">
+                                <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                                Everyone
+                            </li>
+                            <li class="g-likeinput__item">
+                                <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                                Option 2
+                            </li>
+                            <li class="g-likeinput__item">
+                                <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                                Option 3
+                            </li>
+                        </ul>
+                    </div><!--/g-likeinput-->
+
+                    <label class="g-label">
+                        Who do you want to share the answers with
+                    </label>
+                    <div class="g-likeinput">
+                        <div class="g-likeinput__wrap" style="left:190px;">
+                            <input type="text" class="g-likeinput__input" />
+                        </div>
+
+                        <span class="g-likeinput__label">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Alex
+                            <button type="button" class="g-likeinput__remove">
+                                <span class="g-icon-close g-icon-close--small"></span>
+                            </button>
+                        </span>
+
+                        <span class="g-likeinput__label">
+                            <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                            Bohdan
+                            <button type="button" class="g-likeinput__remove">
+                                <span class="g-icon-close g-icon-close--small"></span>
+                            </button>
+                        </span>
+
+                        <ul class="g-likeinput__list">
+                            <li class="g-likeinput__item">
+                                <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                                Alex
+                            </li>
+                            <li class="g-likeinput__item">
+                                <img src="http://placehold.it/16x16" class="g-likeinput__img" alt="" />
+                                Bohdan
+                            </li>
+                        </ul>
+                    </div><!--/g-likeinput-->
+
+                    <div class="g-text-right">
+                        <button type="button" class="g-btn" disabled>Create new survey</button>
+                    </div>
+                </div>
+                <!--/left col-->
+                <!--right col-->
+                <div class="b-modal__col b-modal__col--last">
+                    <div class="b-panel b-panel--alt">
+                        <header class="b-panel__header">
+                            <b>How happy did you feel at work this week?</b>
+                        </header>
+                        <div class="b-panel__entry">
+                            <div class="b-smile">
+                                <img src="http://placehold.it/38x38/bb55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/55ccee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/dd55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/bb55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/55ccee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/dd55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/bb55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/55ccee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/dd55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                                <img src="http://placehold.it/38x38/bb55ee" class="b-smile__img" alt="" style="border-radius:50%" />
+                            </div>
+                            <div class="g-clearfix">
+                                <div class="g-col g-col--two-thirds">
+                                    <div class="b-label">
+                                        <span class="b-label__title">Send to</span>
+                                        <button type="button" class="b-label__btn">
+                                            <span class="g-icon-add g-icon-add--small"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="g-text-right">
+                                    <button type="button" class="g-btn g-btn--alt" disabled>Anonymous</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/right col-->
+            </div>
+        </div><!--/b-modal #modal03-->
+
         <!--/Modal windows-->
     </main>
 	<!--/MAIN CONTENT-->

@@ -33,6 +33,7 @@
     left: 0; right:0;
     overflow:hidden;
     z-index:1000;
+    text-align:left;
     display:none;
 
     &.active,
@@ -43,14 +44,13 @@
 
 .g-likeinput__item{
     display:block;
-    height:35px;
-    padding:0 10px;
-    line-height:35px;
+    padding:8px 10px;
     @extend .g-transition;
     transition-property:background;
     font-size:rem(14px);
     color:$text-color;
     cursor:pointer;
+    white-space:normal;
 
     &:hover{
         background:$primary-light;
@@ -119,3 +119,4 @@
 .g-likeselect__item{
     @extend .g-likeinput__item;
 }
+
