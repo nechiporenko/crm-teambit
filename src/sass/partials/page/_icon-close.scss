@@ -6,6 +6,8 @@
     @include size(16px);
     position:relative;
     overflow:hidden;
+    outline:0;
+    user-select:none;
 
     &:before,
     &:after{
@@ -27,13 +29,6 @@
 
     &:after{
         transform: rotate((-45deg));
-    }
-
-    &:hover{
-        &:before,
-        &:after{
-            background:$primary;
-        }
     }
 }
 

@@ -58,7 +58,7 @@
     height:25px;
     width:27px;
     margin:5px 0;
-    line-height:22px;
+    line-height:18px;
     display:inline-block;
     vertical-align:middle;
     border-radius:$border-radius;
@@ -67,15 +67,6 @@
 
     .g-icon-add--small{
         @include size(8px);
-    }
-
-    &:hover{
-        .g-icon-add--small{
-            &:before,
-            &:after{
-                background:$primary;
-            }
-        }
     }
 }
 

@@ -1,13 +1,11 @@
 ﻿/*Panel Input (Likeinput alt style)*/
 @import "../../modules/_base.scss";
-.g-panelinput{
-
-}
+.g-panelinput{}
 .g-panelinput__wrap{
     @extend .g-input;
     display:block;
     padding:0 30px 0 0;
-    margin-bottom:0;
+    margin-bottom:10px;
     position:relative;
 }
 .g-panelinput__input{
