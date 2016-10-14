@@ -142,6 +142,98 @@
   padding: 0 45px;
 }
 
+.g-btn--has-icon {
+  position: relative;
+  padding-left: 43px;
+}
+
+.g-btn--has-icon > img,
+.g-btn--has-icon > svg {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  margin-top: -7px;
+}
+
+.g-btn--main, .g-btn--secondary, .g-btn--text {
+  padding: 0 15px;
+  background: #30488f;
+  line-height: 36px;
+}
+
+.g-btn--main:hover, .g-btn--secondary:hover, .g-btn--text:hover, .g-btn--main:focus, .g-btn--secondary:focus, .g-btn--text:focus, .g-btn--main:active, .g-btn--secondary:active, .g-btn--text:active {
+  background: #263972;
+  border-color: #263972;
+}
+
+.g-btn--main:disabled, .g-btn--secondary:disabled, .g-btn--text:disabled, .g-btn--main.disabled, .disabled.g-btn--secondary, .disabled.g-btn--text {
+  background: #98a4c7;
+  border-color: #98a4c7;
+}
+
+.g-btn--main.g-btn--has-icon, .g-btn--has-icon.g-btn--secondary, .g-btn--has-icon.g-btn--text {
+  padding-left: 38px;
+}
+
+.g-btn--main.g-btn--has-icon > img, .g-btn--has-icon.g-btn--secondary > img, .g-btn--has-icon.g-btn--text > img,
+.g-btn--main.g-btn--has-icon > svg, .g-btn--has-icon.g-btn--secondary > svg, .g-btn--has-icon.g-btn--text > svg {
+  left: 15px;
+}
+
+.g-btn--secondary, .g-btn--text {
+  background: none;
+  color: #30488f;
+  border-color: #30488f;
+}
+
+.g-btn--secondary:hover, .g-btn--text:hover, .g-btn--secondary:focus, .g-btn--text:focus, .g-btn--secondary:active, .g-btn--text:active {
+  color: #263972;
+  background: none;
+  border-color: #263972;
+}
+
+.g-btn--secondary:disabled, .g-btn--text:disabled, .g-btn--secondary.disabled, .disabled.g-btn--text {
+  color: #98a4c7;
+  background: none;
+  border-color: #98a4c7;
+}
+
+.g-btn--text {
+  padding: 0;
+  color: #30488f;
+  font-size: 13px;
+  border-color: transparent;
+}
+
+.g-btn--text:hover, .g-btn--text:focus, .g-btn--text:active {
+  color: #30488f;
+  border-color: transparent;
+}
+
+.g-btn--text:disabled, .g-btn--text.disabled {
+  color: #98a4c7;
+  background: none;
+  border-color: transparent;
+}
+
+.g-btn--text.g-btn--has-icon {
+  padding-left: 23px;
+}
+
+.g-btn--text.g-btn--has-icon > img,
+.g-btn--text.g-btn--has-icon > svg {
+  left: 0;
+}
+
+.g-btn--small {
+  height: 30px;
+  line-height: 30px;
+  margin-top: 0.15625rem;
+  margin-bottom: 0.15625rem;
+}
+
 /* Forms */
 input[type="email"],
 input[type="number"],
