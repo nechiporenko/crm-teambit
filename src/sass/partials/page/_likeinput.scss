@@ -120,3 +120,11 @@
     @extend .g-likeinput__item;
 }
 
+
+.g-likeinput,
+.g-likeselect{
+    .g-tip{
+        bottom:auto;
+        top:50px;
+    }
+}

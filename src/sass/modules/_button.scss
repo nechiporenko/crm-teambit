@@ -44,6 +44,15 @@
         border-color:#98a4c7;
         cursor:default;
     }
+
+    .icon{
+        display:block;
+        @include size(16px);
+        position:absolute;
+        top:50%;
+        left:20px;
+        margin-top:-7px;
+    }
 }
 
 .g-btn--alt{
@@ -74,15 +83,6 @@
 .g-btn--has-icon{
     position:relative;
     padding-left:43px;
-
-    & > img,
-    & > svg{
-        @include size(16px);
-        position:absolute;
-        top:50%;
-        left:20px;
-        margin-top:-7px;
-    }
 }
 
 
@@ -107,9 +107,7 @@
 
     &.g-btn--has-icon{
         padding-left:38px;
-
-        & > img,
-        & > svg{
+        .icon{
             left:15px;
         }
     }
@@ -161,8 +159,7 @@
     &.g-btn--has-icon{
         padding-left:23px;
 
-        & > img,
-        & > svg{
+        .icon{
             left:0;
         }
     }

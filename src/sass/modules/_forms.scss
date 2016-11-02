@@ -27,6 +27,11 @@ textarea {
     color:#444c52;
     outline:0;
     line-height:normal;
+
+    &.error,
+    .error > &{
+        border-color:#ff5149;
+    }
 }
 
 .g-input,
@@ -58,6 +63,26 @@ textarea {
     margin-bottom:8px;
     font-family: $font-bold;
     font-weight: 500;
+}
+
+.g-fieldset{
+    border:none;
+    padding:0;
+    margin:0;
+    position:relative;
+}
+
+.g-tip{
+    display:block;
+    font-size:rem(13px);
+    position:absolute;
+    left:11px; bottom:11px;
+    color:#bdb5af;
+
+    &.error,
+    .error > &{
+        color:#ff5149;
+    }
 }
 
 

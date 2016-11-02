@@ -121,6 +121,16 @@
   cursor: default;
 }
 
+.g-btn .icon {
+  display: block;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  margin-top: -7px;
+}
+
 .g-btn--alt {
   background: none;
   color: #263972;
@@ -147,16 +157,6 @@
   padding-left: 43px;
 }
 
-.g-btn--has-icon > img,
-.g-btn--has-icon > svg {
-  height: 16px;
-  width: 16px;
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  margin-top: -7px;
-}
-
 .g-btn--main, .g-btn--secondary, .g-btn--text {
   padding: 0 15px;
   background: #30488f;
@@ -177,8 +177,7 @@
   padding-left: 38px;
 }
 
-.g-btn--main.g-btn--has-icon > img, .g-btn--has-icon.g-btn--secondary > img, .g-btn--has-icon.g-btn--text > img,
-.g-btn--main.g-btn--has-icon > svg, .g-btn--has-icon.g-btn--secondary > svg, .g-btn--has-icon.g-btn--text > svg {
+.g-btn--main.g-btn--has-icon .icon, .g-btn--has-icon.g-btn--secondary .icon, .g-btn--has-icon.g-btn--text .icon {
   left: 15px;
 }
 
@@ -222,8 +221,7 @@
   padding-left: 23px;
 }
 
-.g-btn--text.g-btn--has-icon > img,
-.g-btn--text.g-btn--has-icon > svg {
+.g-btn--text.g-btn--has-icon .icon {
   left: 0;
 }
 
@@ -267,6 +265,26 @@ textarea {
   color: #444c52;
   outline: 0;
   line-height: normal;
+}
+
+.g-input.error, .error.g-likeinput__input, .error.g-likeselect__input, .error.g-panelinput__input, .error.g-panelinput__wrap,
+.error > .g-input,
+.error > .g-likeinput__input,
+.error > .g-likeselect__input,
+.error > .g-panelinput__input,
+.error > .g-panelinput__wrap,
+.g-select.error,
+.error >
+.g-select,
+.g-textarea.error,
+.error >
+.g-textarea,
+.g-likeinput.error,
+.error.g-likeselect,
+.error >
+.g-likeinput,
+.error > .g-likeselect {
+  border-color: #ff5149;
 }
 
 .g-input::-webkit-input-placeholder, .g-likeinput__input::-webkit-input-placeholder, .g-likeselect__input::-webkit-input-placeholder, .g-panelinput__input::-webkit-input-placeholder, .g-panelinput__wrap::-webkit-input-placeholder,
@@ -319,6 +337,27 @@ textarea {
   margin-bottom: 8px;
   font-family: "mainFontBold";
   font-weight: 500;
+}
+
+.g-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.g-tip {
+  display: block;
+  font-size: 0.8125rem;
+  position: absolute;
+  left: 11px;
+  bottom: 11px;
+  color: #bdb5af;
+}
+
+.g-tip.error,
+.error > .g-tip {
+  color: #ff5149;
 }
 
 /*Modal Windows*/
@@ -745,6 +784,12 @@ textarea {
 
 .g-likeselect__input {
   padding-right: 0;
+}
+
+.g-likeinput .g-tip, .g-likeselect .g-tip,
+.g-likeselect .g-tip {
+  bottom: auto;
+  top: 50px;
 }
 
 /*Panel Input (Likeinput alt style)*/
